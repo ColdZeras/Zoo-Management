@@ -1,4 +1,6 @@
 package staff;
+import animals.Animal;
+import infrastructure.Enclosure;
 
 public abstract class ZooStaff implements ZooEmployee {
     private String name;
@@ -11,6 +13,11 @@ public abstract class ZooStaff implements ZooEmployee {
         this.setEmployeeId(employeeId);
         this.setSalary(salary);
         this.department = department;
+    }
+    public interface Staff {
+        void work();
+        void cleanEnclosure(Enclosure enclosure);
+        string getEmployeeInfo();
     }
 
     public String getName() {
@@ -61,4 +68,5 @@ public abstract class ZooStaff implements ZooEmployee {
     }
 
     public abstract void performDuties();
+
 }
